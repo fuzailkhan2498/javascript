@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> Select Drop Down Menu</title>
+        <script>
+            function validate()
+            {
+                var a=document.myform.color.value;
+                if(a=="")
+                {
+                    alert("please select a choice");
+                    document.myform.color.focus;
+                    return false;
+                }
+                else
+                {
+                    alert("succesfully choosen a color");
+                    return true;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="myform" onsubmit="return validate()">
+              <h3>CHOOSE A COLOR</h3>
+            <select name="color">
+                <option value="">Select a value</option>
+                <option value="red">RED</option>
+                <option value="green">GREEN</option>
+                <option value="blue">BLUE</option>
+            </select>
+            <input type="button" value="submit">
+        </form>
+    </body>
+</html>

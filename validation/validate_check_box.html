@@ -1,0 +1,48 @@
+
+<html>
+    <head>
+        <title> Select Drop Down Menu</title>
+        <script>
+            function validate()
+            {
+                var valid=false;
+                if(document.getElementById('javascript').checked)
+                {
+                      valid=true;
+                }
+                else if(document.getElementById('jquery').checked)
+                {
+                      valid=true;
+                }
+                else if(document.getElementById('angularjs').checked)
+                {
+                      valid=true;
+                }
+                else if(document.getElementById('react').checked)
+                {
+                      valid=true;
+                }
+                if(valid)
+                {
+                    alert("accepted");
+                }else{
+                    alert("please select a technology");
+                    return false;
+                }
+                
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="myform" onsubmit="return validate()">
+              <h3>CHOOSE A TECHNOLOGY</h3>
+             
+              <input type="checkbox" id="javascript"value="Javascript">JAVASCRIPT
+              <input type="checkbox" id="jquery"value="JQuery">JQUERY
+              <input type="checkbox" id="angularjs"value="Angularjs">ANGULARJS
+              <input type="checkbox" id="react"value="React">REACT
+                    <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head><title> Calculator</title>
+        <script src="js2.js"> </script>
+     </head>
+    <body>
+        <div border top:5px;>
+                <table cellpadding="10px" width="70%" height="30%" bgcolor="skkyblue" align="center" cellspacing="2";>
+         <form name="calcform">
+            <tr><td> ENTER THE FIRST NUMBER </td>
+               <td><input type="text" name="num1"/><br/></td>
+               </tr>
+               <tr><td>ENTER THE SECOND NUMBER</td>
+               <td><input type="text" name="num2"/><br/></td>
+               </tr>
+               <tr><td>RESULT</td>
+               <td><input type="text" name="result"/><br/></td>
+               </tr>
+               <tr>
+                <td>
+               <input type="button" name="Add" value="ADD" onclick="calculate(this)"/> 
+               <input type="button" name="Sub" value="Sub" onclick="calculate(this)"/>
+               <input type="button" name="Mul" value="Mul" onclick="calculate(this)"/>
+               <input type="button" name="Div" value="Div" onclick="calculate(this)"/>
+               <input type="button" name="Mod" value="Mod" onclick="calculate(this)"/>
+               </td>
+            </tr>
+         </form>
+         </table>
+       </div>
+    </body>
+</html>

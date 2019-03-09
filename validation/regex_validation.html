@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> Select Drop Down Menu</title>
+        <script>
+            function validate()
+            {
+               // var a=document.getElementById('uname').value;
+                var b=document.getElementById('m_no').value;
+               // var exp1=/^[a-zA-Z]+$/;
+               // var res1=exp1.test(a);
+                var exp2=/^[0-9]+$/;
+                var res1=exp2.test(b);
+                /*if(res){
+                    alert("summitting");
+
+                }
+                else */if(res1)
+                {
+                    alert("summitting2");
+
+                }
+                else{
+                    alert("enter a valid name");;
+                    return false;
+
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="myform" onsubmit="return validate()">
+              <h3>ENTER THE NAME :</h3>
+  
+        M NO :<input type="text" id="m_no">
+            <input type="button" value="submit">
+        </form>
+    </body>
+</html>

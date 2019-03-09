@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> ADDRESS VALIDATION</title>
+        <script>
+            function validate()
+            {
+               
+              var ex=/^[A-Za-z0-9\s]{1,10}$/;
+              var a=document.myform.address.value;
+              var res=ex.test(a);
+              if(res)
+              {
+                  alert("validation succesful");
+              }
+              else
+              {
+                  document.getElementById('err').innerHTML=res;
+                  document.myform.address.focus();
+                  return false;
+              }
+            }
+        </script>
+    </head>
+
+    <body>
+            <h3> USER REGESTRATION </h3>
+        <form name="myform" onsubmit="return validate()">
+          Address :<textarea name="address"></textarea>
+          <b id="err"></b>
+            <input type="submit" value="submit"/>
+        </form>
+    </body>
+</html>

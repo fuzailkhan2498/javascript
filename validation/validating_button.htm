@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Select Drop Down Menu</title>
+        <script>
+            function validate()
+            {
+                var valid=false;
+                var x=document.myform.paymentmethod;
+                for(var i=0;i<x.length;i++)
+                {
+                    if(x[i].checked)
+                    {
+                    valid = true;
+                    break;
+                    }
+                }
+                if(valid)
+                {
+                    alert("successful");
+                }else{
+                    alert("please a mode of payment");
+                    return false;
+                }
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="myform" onsubmit="return validate()">
+              <h3>CHOOSE A PAYMENT OPTION</h3>
+           <input type="radio" name="paymentmethod" value="cod">Cash On Delivery
+           <input type="radio" name="paymentmethod" value="debit">Debit Card
+           <input type="radio" name="paymentmethod" value="credit">Credit Card
+           <input type="button" value="submit">
+        </form>
+    </body>
+</html>

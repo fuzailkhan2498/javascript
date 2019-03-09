@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>number validation</title>
+        <script>
+            function validation()
+            {
+                var number=document.myform.number.value;
+                if(isNaN(number) || number<=0 ||number >10)
+                {
+                   alert("enter the no between 1-10")
+                   return false;
+
+                }
+                else{
+                    alert("form is validating");
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform" onsubmit="return validation()">
+        Number : <input type="text" name="number" placeholder="enter no">
+        <input type="button" name="submit" value="submit">
+        
+        </form>
+    </body>
+</html>
