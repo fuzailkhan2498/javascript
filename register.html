@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>REGESTER</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",
+        initial-scale=1.0">
+        <meta http-equip="X-UA-Compatible" content="ie=edge">
+        <title> REGISTER</title>
+         <!-- Compiled and minified CSS -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css">
+        <script>
+        function validate()
+        {
+            var valid=true;
+            var sname=document.myform.sname.value;
+            var fname=document.myform.fname.value;
+            var college_name=document.myform.college_name.value;
+            var branch_name=document.myform.branch_name.value;
+            var year=document.myform.year.value;
+            
+            exp1=/^[A-Za-z\s]+$/;
+            exp2=/^[1-4]{1,4}$/;
+            res1=exp1.test(sname);
+            res2=exp1.test(fname);
+            res3=exp1.test(college_name);
+            res4=exp1.test(branch_name);
+            res5=exp2.test(year);
+            if(!res1)
+            {
+                alert("please enter valid name");
+                document.myform.sname.focus;
+                valid=false
+                
+            }
+            else if(!res2)
+            {
+                alert("please enter valid father name");
+                document.myform.father_name.focus;
+                valid=false
+                
+            }
+            
+            else if(!res3)
+            {
+                alert("please enter College name");
+                document.myform.college_name.focus;
+                valid=false
+                
+            }
+            
+            else if(!res4)
+            {
+                alert("please enter valid branch name");
+                document.myform.branch_name.focus;
+                valid=false
+                
+            }
+            else if(!res5)
+            {
+                alert("please enter valid year");
+                document.myform.year.focus;
+                valid=false
+                
+            }
+            if(valid==false)
+            {
+                return false;
+
+            }
+            else{
+                alert("form submitting succesfully");
+            }
+
+            
+            
+            
+            
+        }
+    </script>
+    </head>
+    <body>
+        
+            <h3 class="center-align">  ENTER DETAILS TO RENT A BOOK </h3>
+            <div class="container" bgcolor="red">
+        <form name="myform" onsubmit="return validate()">
+       Student Name  <input type="text" name="sname" placeholder="Student Name"></br>
+       Father Name     <input type="text" name="fname" placeholder="Father Name"></br>
+        College  <input type="text" name="college_name" placeholder="Collge Name"></br>
+       Branch  <input type="text" name="branch_name" placeholder="Branch Name"></br>
+       Year <input type="text" name="year" placeholder="Persuing Year"></br>
+       <input type="submit" name="submit" value="submit" ></br>
+        
+        
+        </form>
+    </div>
+    </body>
+</html>
